@@ -37,8 +37,8 @@ dt = datetime.now()
 
 while numi > 0:
 
-    print("")
-    print("iteration "+str(numi))
+    #print("")
+    #print("iteration "+str(numi))
     
     if dt.hour > 8 and dt.hour < 22:
 
