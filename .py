@@ -16,62 +16,70 @@ fnames = [""]
 #male name spelling options
 mnames = ["vincent rooyakkers","vincent royakkers","vincent rooyakers","vincent royakers"]
 
+#number of iterations
+numi = int(2)
+
 #open page
 webbrowser.open_new(url)
 time.sleep(3)
 
-#select next on pg 1
-pyautogui.press('tab')
-time.sleep(1)   
+while numi > 0:
+    #select next on pg 1
+    pyautogui.press('tab')
+    time.sleep(1)   
 
-#click next on pg 1
-pyautogui.press('enter')
-time.sleep(3)
+    #click next on pg 1
+    pyautogui.press('enter')
+    time.sleep(3)
 
-#select pg 2 text field
-pyautogui.press('tab')
-time.sleep(1)
+    #select pg 2 text field
+    pyautogui.press('tab')
+    time.sleep(1)
+    
+    #enter text from fnames
+    pyautogui.typewrite(fnames[math.floor(random.randint(0,len(fnames)-1))])
+    time.sleep(1)
 
-#enter text from fnames
-pyautogui.typewrite(fnames[math.floor(random.randint(0,len(fnames)-1))])
-time.sleep(1)
+    #selet pg 2 back
+    pyautogui.press('tab')
+    time.sleep(1)
 
-#selet pg 2 back
-pyautogui.press('tab')
-time.sleep(1)
+    #select pg 2 next
+    pyautogui.press('tab')
+    time.sleep(1)
 
-#select pg 2 next
-pyautogui.press('tab')
-time.sleep(1)
+    #click pg 2 next
+    pyautogui.press('enter')
+    time.sleep(3)
 
-#click pg 2 next
-pyautogui.press('enter')
-time.sleep(3)
+    #select pg3 text field
+    pyautogui.press('tab')
+    time.sleep(1)
 
-#select pg3 text field
-pyautogui.press('tab')
-time.sleep(1)
+    #enter text from mnames
+    pyautogui.typewrite(mnames[math.floor(random.randint(0,len(mnames)-1))])
+    time.sleep(1)
 
-#enter text from mnames
-pyautogui.typewrite(mnames[math.floor(random.randint(0,len(mnames)-1))])
-time.sleep(1)
+    #select pg3 back
+    pyautogui.press('tab')
+    time.sleep(1)
 
-#select pg3 back
-pyautogui.press('tab')
-time.sleep(1)
+    #select pg3 next
+    pyautogui.press('tab')
+    time.sleep(1)
 
-#select pg3 next
-pyautogui.press('tab')
-time.sleep(1)
+    #click pg3 next
+    pyautogui.press('enter')
+    time.sleep(3)
 
-#click pg3 next
-pyautogui.press('enter')
-time.sleep(3)
+    #select pg4 submit another response
+    pyautogui.press('tab')
+    time.sleep(1)
 
-#select pg4 submit another response
-pyautogui.press('tab')
-time.sleep(1)
+    #click pg4 submit another response
+    pyautogui.press('enter')
+    time.sleep(3)
 
-#click pg4 submit another response
-pyautogui.press('enter')
-time.sleep(3)
+    numi = numi - 1
+
+    time.sleep(random.randint(1,60) * 60)
