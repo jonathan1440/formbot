@@ -17,6 +17,15 @@ fnames = [""]
 #male name spelling options
 mnames = ["vincent rooyakkers","vincent royakkers","vincent rooyakers","vincent royakers"]
 
+#captialize random words
+def words(string):
+    wrds = string.split(" ")
+    for i in range(len(wrds)):
+        if(math.floor(random.randint(0,2)) == 0):
+            wrds[i] = wrds[i].capitalize()
+
+    return wrds
+
 #number of iterations
 numi = int(2)
 
@@ -49,7 +58,7 @@ while numi > 0:
         time.sleep(1)
 
         #enter text from fnames
-        pyautogui.typewrite(fnames[math.floor(random.randint(0,len(fnames)-1))])
+        pyautogui.typewrite(words(fnames[math.floor(random.randint(0,len(fnames)-1))]))
         #print("enter text from fnames")
         time.sleep(1)
 
@@ -74,7 +83,7 @@ while numi > 0:
         time.sleep(1)
 
         #enter text from mnames
-        pyautogui.typewrite(mnames[math.floor(random.randint(0,len(mnames)-1))])
+        pyautogui.typewrite(words(mnames[math.floor(random.randint(0,len(mnames)-1))]))
         #print("enter text from mnames")
         time.sleep(1)
 
