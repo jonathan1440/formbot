@@ -36,7 +36,8 @@ time.sleep(3)
 dt = datetime.now()
 
 while numi > 0:
-
+    dt = datetime.now()
+    
     #print("")
     #print("iteration "+str(numi))
     
