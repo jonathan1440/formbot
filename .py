@@ -115,3 +115,6 @@ while numi > 0:
         numi = numi - 1
 
         time.sleep(random.randint(1,60) * 60)
+
+    else:
+        print("wrong time")
